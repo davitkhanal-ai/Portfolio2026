@@ -78,7 +78,7 @@ const Navbar = () => {
             }}
             className="text-xl font-bold tracking-tighter text-white inline-block"
           >
-            SELECT menu FROM <span className="text-papaya">navbar order by menu asc;</span>
+            SELECT menu FROM navbar order by<span className="text-papaya"> 1;</span>
           </motion.a>
         </div>
 
