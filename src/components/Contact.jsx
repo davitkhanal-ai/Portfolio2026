@@ -179,7 +179,7 @@ const Contact = () => {
                 khanaldavit@gmail.com
               </a>
               <a
-                href="public\Davit Khanal_Curriculum Vitae.pdf" // replace with your actual file name in public folder
+                href="/Davit Khanal_Curriculum Vitae.pdf" // replace with your actual file name in public folder
                 download
                 className="px-8 py-3 border border-cyan text-cyan hover:bg-cyan/10 rounded-full font-medium transition-colors inline-block text-center"
               >
