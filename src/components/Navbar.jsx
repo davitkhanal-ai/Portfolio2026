@@ -29,9 +29,9 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "About", href: "#hero" },
+    { name: "Contact", href: "#contact" },
     { name: "Databases", href: "#databases" },
     { name: "Experience", href: "#experience" },
-    { name: "Contact", href: "#contact" },
   ];
 
   return (
@@ -78,7 +78,7 @@ const Navbar = () => {
             }}
             className="text-xl font-bold tracking-tighter text-white inline-block"
           >
-            SELECT menu from <span className="text-papaya">navbar;</span>
+            SELECT menu FROM <span className="text-papaya">navbar order by menu asc;</span>
           </motion.a>
         </div>
 
