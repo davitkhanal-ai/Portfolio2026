@@ -4,20 +4,20 @@ import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-    const [glowIndex, setGlowIndex] = useState(null);
+  const [glowIndex, setGlowIndex] = useState(null);
 
-    useEffect(() => {
-      let index = 0;
+  useEffect(() => {
+    let index = 0;
 
-      const interval = setInterval(() => {
-        setGlowIndex(index);
-        index = (index + 1) % navLinks.length;
-      }, 5000); // 5 seconds
+    const interval = setInterval(() => {
+      setGlowIndex(index);
+      index = (index + 1) % navLinks.length;
+    }, 5000); // 5 seconds
 
-      return () => clearInterval(interval);
-    }, []);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -76,9 +76,9 @@ const Navbar = () => {
               duration: 0.6,
               ease: [0.25, 1.2, 0.5, 1],
             }}
-            className="text-xl font-bold tracking-tighter text-white inline-block"
+            className="text-xl  tracking-tighter text-white inline-block"
           >
-            SELECT menu FROM navbar ORDER BY<span className="text-papaya"> 1;</span>
+            SELECT menu FROM <span className="text-papaya">navbar;</span>
           </motion.a>
         </div>
 
