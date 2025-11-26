@@ -11,7 +11,7 @@ const databases = [
         id: 'postgresql',
         name: 'PostgreSQL',
         icon: SiPostgresql,
-        tagline: 'Advanced Object-Relational DB',
+        tagline: 'Reporting Services',
         color: '#336791',
         projects: [
             {
@@ -32,7 +32,7 @@ const databases = [
         id: 'sqlserver',
         name: 'SQL Server',
         icon: DiMsqlServer,
-        tagline: 'Enterprise Data Management',
+        tagline: 'Enterprise Applications & Migrations',
         color: '#CC2927',
         projects: [
             {
@@ -43,11 +43,12 @@ const databases = [
             }
         ]
     },
+
     {
         id: 'mysql',
         name: 'MySQL',
         icon: GrMysql,
-        tagline: 'Reliable Web Database',
+        tagline: 'Reliable Wallet Databases',
         color: '#00758F',
         projects: [
             {
@@ -58,11 +59,12 @@ const databases = [
             }
         ]
     },
+
     {
         id: 'airflow',
         name: 'Airflow',
         icon: SiApacheairflow,
-        tagline: 'Workflow Orchestration',
+        tagline: 'Workflow Orchestration & Scheduling',
         color: '#00C7D4',
         projects: [
             {
@@ -183,10 +185,10 @@ const Databases = () => {
                     viewport={{ once: true }}
                     className="mb-16"
                 >
-                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 text-center">
                         Technical <span className="text-papaya">Arsenal</span>
                     </h2>
-                    <p className="text-gray-400 text-lg max-w-2xl">
+                    <p className="text-gray-400 text-lg max-w-2xl text-center mx-auto">
                         Click on a technology to view real-world project implementations.
                     </p>
                 </motion.div>

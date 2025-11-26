@@ -34,7 +34,7 @@ const Experience = () => {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    className="text-4xl md:text-6xl font-bold text-white mb-16 text-center md:text-left"
+                    className="text-4xl md:text-6xl font-bold text-white mb-16 text-center"
                 >
                     Career <span className="text-cyan">Timeline</span>
                 </motion.h2>

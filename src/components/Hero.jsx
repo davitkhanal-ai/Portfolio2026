@@ -1,5 +1,90 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+
+const KhanalParticles = ({ x, y }) => {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    // Add keyframe animations to head
+    const styleSheet = document.createElement("style");
+    let keyframes = "";
+
+    // Create particles inside the text
+    const particleCount = 20;
+    const particles = [];
+
+    for (let i = 0; i < particleCount; i++) {
+      const offsetX = (Math.random() - 0.5) * 40;
+      const offsetY = (Math.random() - 0.5) * 40;
+      const duration = Math.random() * 2 + 1.5;
+      const delay = Math.random() * 0.5;
+
+      keyframes += `
+        @keyframes particle${i} {
+          0%, 100% {
+            transform: translate(0, 0) scale(1);
+            opacity: 0.6;
+          }
+          50% {
+            transform: translate(${offsetX}px, ${offsetY}px) scale(0.7);
+            opacity: 0.2;
+          }
+        }
+      `;
+
+      particles.push({
+        size: Math.random() * 4 + 2,
+        xPos: Math.random() * 100,
+        yPos: Math.random() * 100,
+        duration,
+        delay,
+        isOrange: Math.random() > 0.5,
+        keyframeIndex: i,
+      });
+    }
+
+    styleSheet.textContent = keyframes;
+    document.head.appendChild(styleSheet);
+
+    // Create particle elements
+    particles.forEach((p) => {
+      const particle = document.createElement("div");
+      particle.className = "absolute rounded-full pointer-events-none";
+
+      particle.style.width = p.size + "px";
+      particle.style.height = p.size + "px";
+      particle.style.left = p.xPos + "%";
+      particle.style.top = p.yPos + "%";
+      particle.style.backgroundColor = p.isOrange ? "#FF8700" : "#00F0FF";
+      particle.style.opacity = "0.6";
+      particle.style.animation = `particle${p.keyframeIndex} ${p.duration}s infinite ease-in-out ${p.delay}s`;
+
+      container.appendChild(particle);
+    });
+
+    return () => {
+      document.head.removeChild(styleSheet);
+      container.innerHTML = "";
+    };
+  }, []);
+
+  return (
+    <div
+      ref={containerRef}
+      className="absolute inset-0 overflow-hidden"
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+      }}
+    />
+  );
+};
 
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -10,7 +95,7 @@ const Hero = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     let animationFrameId;
     let particles = [];
 
@@ -19,7 +104,7 @@ const Hero = () => {
       canvas.height = window.innerHeight;
     };
 
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener("resize", resizeCanvas);
     resizeCanvas();
 
     class Particle {
@@ -29,7 +114,7 @@ const Hero = () => {
         this.size = Math.random() * 10.5;
         this.speedX = Math.random() * 1 - 0.8;
         this.speedY = Math.random() * 0.5 - 0.25;
-        this.color = Math.random() > 0.5 ? '#FF8700' : '#00F0FF';
+        this.color = Math.random() > 0.5 ? "#FF8700" : "#00F0FF";
       }
 
       update() {
@@ -76,39 +161,39 @@ const Hero = () => {
     animate();
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener("resize", resizeCanvas);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
 
   return (
     <section
-      id='hero'
-      className='relative h-screen w-full overflow-hidden flex items-center justify-center bg-background'
+      id="hero"
+      className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-background"
     >
-      <canvas ref={canvasRef} className='absolute inset-0 z-0' />
+      <canvas ref={canvasRef} className="absolute inset-0 z-0" />
 
       {/* Overlay Gradient */}
-      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background z-10 pointer-events-none' />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background z-10 pointer-events-none" />
 
       <motion.div
         style={{ y: y1, opacity }}
-        className='relative z-20 text-center px-4'
+        className="relative z-20 text-center px-4"
       >
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className='text-blue-500 font-medium tracking-[0.2em] mb-4 uppercase text-sm md:text-base'
+          className="text-blue-500 font-medium tracking-[0.2em] mb-4 uppercase text-sm md:text-base"
         >
-          SQL Developer at Vanilla Trans Technor
+          Developer at Vanilla Trans Technor
         </motion.h2>
 
         <motion.h1
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className='text-5xl md:text-7xl lg:text-9xl font-bold text-white mb-6 tracking-tight cursor-pointer relative inline-block'
+          className="text-5xl md:text-7xl lg:text-9xl font-bold text-white mb-6 tracking-tight cursor-pointer relative inline-block"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -137,8 +222,9 @@ const Hero = () => {
                     >
 
                     </motion.span> */}
-          Davit{' '}
-          <span className='text-transparent bg-clip-text bg-gradient-to-r from-papaya to-orange-300'>
+          Davit{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-papaya to-orange-300 relative inline-block">
+            <KhanalParticles />
             Khanal
           </span>
         </motion.h1>
@@ -147,10 +233,10 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className='text-gray-400 text-lg md:text-2xl max-w-2xl mx-auto font-light'
+          className="text-gray-400 text-lg md:text-2xl max-w-2xl mx-auto font-light"
         >
-          Turning terabytes into insights at{' '}
-          <span className='text-white font-medium'>lightspeed</span>.
+          SQL Developer | ETL/ELT | Python | Apache Airflow
+          {/* <span className="text-white font-medium">lightspeed</span>. */}
         </motion.p>
       </motion.div>
 
@@ -158,16 +244,16 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
-        className='absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center gap-2'
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center gap-2"
       >
-        <span className='text-xs text-gray-500 uppercase tracking-widest'>
+        <span className="text-xs text-gray-500 uppercase tracking-widest">
           Scroll
         </span>
-        <div className='w-[1px] h-12 bg-gradient-to-b from-cyan to-transparent relative overflow-hidden'>
+        <div className="w-[1px] h-12 bg-gradient-to-b from-cyan to-transparent relative overflow-hidden">
           <motion.div
             animate={{ y: [0, 50] }}
-            transition={{ repeat: Infinity, duration: 1.5, ease: 'linear' }}
-            className='absolute top-0 left-0 w-full h-1/2 bg-pink-500 blur-[1px]'
+            transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
+            className="absolute top-0 left-0 w-full h-1/2 bg-pink-500 blur-[1px]"
           />
         </div>
       </motion.div>
