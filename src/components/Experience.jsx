@@ -3,36 +3,25 @@ import { motion } from 'framer-motion';
 
 const experiences = [
     {
-        year: '2023 - Present',
-        company: 'TechGiant Corp',
-        role: 'Senior SQL Developer',
+        year: '2024 - 2025',
+        company: 'Vanilla Trans Technor Pvt Ltd.',
+        role: 'Mid SQL Developer',
         description: 'Leading the database migration team for a high-traffic fintech platform.',
         achievements: [
-            'Architected a multi-region PostgreSQL cluster handling 50k TPS.',
+            'Assisted in managing and maintaining SQL Server used by over 700K users and handling 150K+ daily transactions.',
             'Reduced cloud infrastructure costs by 40% through query optimization.',
-            'Mentored 5 junior developers in advanced SQL patterns.'
+            'Implemented cross database replication for reporting and analytics, improving data accessibility by 60%.'
         ]
     },
     {
         year: '2021 - 2023',
-        company: 'DataFlow Systems',
-        role: 'Data Engineer',
-        description: 'Built scalable ETL pipelines and data warehousing solutions.',
+        company: 'Synergy Tech Software',
+        role: 'Support Engineer',
+        description: 'Application Support for Class D Banks',
         achievements: [
-            'Designed and implemented a real-time analytics pipeline using Kafka and Snowflake.',
-            'Improved data accuracy by 99.9% with automated validation frameworks.',
-            'Migrated legacy Oracle systems to cloud-native architecture.'
-        ]
-    },
-    {
-        year: '2019 - 2021',
-        company: 'StartUp Inc',
-        role: 'Junior Database Administrator',
-        description: 'Managed production databases and ensured high availability.',
-        achievements: [
-            'Maintained 99.99% uptime for critical production databases.',
-            'Automated backup and recovery procedures reducing RTO by 60%.',
-            'Optimized slow-running queries for the reporting dashboard.'
+            'Supporting and maintaining financial software systems used by microfinance institutions and cooperatives',
+            'Involves troubleshooting and resolving complex issues across both the user interface and back-end',
+            'Include collaborating with development teams to report bugs, test updates, and implement client-specific enhancements'
         ]
     }
 ];

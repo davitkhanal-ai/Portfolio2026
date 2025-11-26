@@ -41,7 +41,7 @@ const Contact = () => {
                             <input
                                 type="text"
                                 className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-papaya transition-colors"
-                                placeholder="John Doe"
+                                placeholder="Your Name"
                             />
                         </div>
                         <div>
@@ -77,13 +77,13 @@ const Contact = () => {
                         className="flex flex-col items-center md:items-start space-y-8"
                     >
                         <div className="flex gap-6">
-                            <a href="#" className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:text-papaya transition-all group">
+                            <a href="https://github.com/davitkhanal-ai" className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:text-papaya transition-all group">
                                 <Github size={24} className="text-gray-300 group-hover:text-papaya" />
                             </a>
-                            <a href="#" className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:text-cyan transition-all group">
+                            <a href="https://www.linkedin.com/in/davitkhanal/" className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:text-cyan transition-all group">
                                 <Linkedin size={24} className="text-gray-300 group-hover:text-cyan" />
                             </a>
-                            <a href="#" className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:text-papaya transition-all group">
+                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:text-papaya transition-all group">
                                 <Code size={24} className="text-gray-300 group-hover:text-papaya" />
                             </a>
                         </div>
