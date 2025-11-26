@@ -101,7 +101,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className='text-blue-500 font-medium tracking-[0.2em] mb-4 uppercase text-sm md:text-base'
         >
-          SQL Developer at Vanilla Tech
+          SQL Developer at Vanilla Trans Technor
         </motion.h2>
 
         <motion.h1
