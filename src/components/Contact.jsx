@@ -118,7 +118,7 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-papaya transition-colors"
-                placeholder="Tell me about your project..."
+                placeholder="How can i help you..."
                 required
               />
             </div>
