@@ -140,6 +140,7 @@ const Contact = () => {
           >
             <div className="flex gap-6">
               <a
+                target="_blank"
                 href="https://github.com/davitkhanal-ai"
                 className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:text-papaya transition-all group"
               >
@@ -149,6 +150,7 @@ const Contact = () => {
                 />
               </a>
               <a
+                target="_blank"
                 href="https://www.linkedin.com/in/davitkhanal/"
                 className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:text-cyan transition-all group"
               >
@@ -158,6 +160,7 @@ const Contact = () => {
                 />
               </a>
               <a
+                target="_blank"
                 href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                 className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:text-papaya transition-all group"
               >

@@ -7,74 +7,80 @@ import { DiMsqlServer } from "react-icons/di";
 import { GrMysql } from "react-icons/gr";
 
 const databases = [
-    {
-        id: 'postgresql',
-        name: 'PostgreSQL',
-        icon: SiPostgresql,
-        tagline: 'Reporting Services',
-        color: '#336791',
-        projects: [
-            {
-                title: 'High-Scale Analytics Engine',
-                desc: 'Optimized complex joins across billion-row tables for a fintech client.',
-                stats: ['Reduced query time 45s → 1.2s', 'Implemented declarative partitioning'],
-                tags: ['PL/pgSQL', 'PostGIS']
-            },
-            {
-                title: 'Multi-Tenant SaaS Architecture',
-                desc: 'Designed row-level security policies for secure data isolation.',
-                stats: ['Zero data leaks', 'Seamless tenant migration'],
-                tags: ['RLS', 'Supabase']
-            }
-        ]
-    },
-    {
-        id: 'sqlserver',
-        name: 'SQL Server',
-        icon: DiMsqlServer,
-        tagline: 'Enterprise Applications & Migrations',
-        color: '#CC2927',
-        projects: [
-            {
-                title: 'Legacy System Migration',
-                desc: 'Migrated on-premise MSSQL cluster to Azure SQL Managed Instance.',
-                stats: ['99.99% availability', 'Automated failover setup'],
-                tags: ['Azure', 'T-SQL']
-            }
-        ]
-    },
+  {
+    id: "postgresql",
+    name: "PostgreSQL",
+    icon: SiPostgresql,
+    tagline: "Reporting Services",
+    color: "#336791",
+    projects: [
+      {
+        title: "PostgreSQL Reporting Service Enhancement",
+        desc: "Designed and optimized PostgreSQL to support high-volume reporting services, ensuring fast and reliable analytics delivery.",
+        stats: [
+          " Accelerated report generation by 80%",
+          "Implemented materialized views + scheduled refresh using airflow",
+        ],
+        tags: ["pgSQL", "Airflow", "JsonB"],
+      },
+    ],
+  },
+  {
+    id: "sqlserver",
+    name: "SQL Server",
+    icon: DiMsqlServer,
+    tagline: "Enterprise Applications & Migrations",
+    color: "#CC2927",
+    projects: [
+      {
+        title: "Legacy System Migration",
+        desc: "Led the end-to-end migration of a fintech application and a core remittance platform to a modern SQL Server environment, ensuring data integrity, zero-downtime cutover, and improved performance.",
+        stats: [
+          "Seamless cutover with zero data loss",
+          "40% faster transaction processing post-migration",
+        ],
+        tags: ["SQL Server", "T-SQL", "Database Migration"],
+      },
+    ],
+  },
 
-    {
-        id: 'mysql',
-        name: 'MySQL',
-        icon: GrMysql,
-        tagline: 'Reliable Wallet Databases',
-        color: '#00758F',
-        projects: [
-            {
-                title: 'E-commerce Inventory System',
-                desc: 'High-concurrency inventory tracking for flash sales.',
-                stats: ['Handled 50k req/sec', 'Optimized InnoDB buffer pool'],
-                tags: ['Vitess', 'Percona']
-            }
-        ]
-    },
+  {
+    id: "mysql",
+    name: "MySQL",
+    icon: GrMysql,
+    tagline: "Reliable Wallet Databases",
+    color: "#00758F",
+    projects: [
+      {
+        title: "Wallet Service Database",
+        desc: "Built a scalable reporting workflow for the wallet app using MySQL as the core transaction store. Implemented AWS Lambda functions for automated email reporting and complex report queries, integrated with a Java-based processing layer.",
+        stats: [
+          "Automated daily/weekly reporting",
+          "Reduced manual ops by 90%",
+        ],
+        tags: ["MySQL", "AWS Lambda", "Java", "Serverless"],
+      },
+    ],
+  },
 
-    {
-        id: 'airflow',
-        name: 'Airflow',
-        icon: SiApacheairflow,
-        tagline: 'Workflow Orchestration & Scheduling',
-        color: '#00C7D4',
-        projects: [
-            {
-                title: 'Data Pipeline Orchestration',
-                desc: 'Managed 500+ daily DAGs for marketing analytics.',
-                stats: ['Reduced failure rate by 80%', 'Custom operators for internal APIs'],
-                tags: ['Python', 'Dag']
-            }
-        ]
-    }
+  {
+    id: "airflow",
+    name: "Airflow",
+    icon: SiApacheairflow,
+    tagline: "Workflow Orchestration & Scheduling",
+    color: "#00C7D4",
+    projects: [
+      {
+        title: "Reporting & Inter-Database DAG Orchestration",
+        desc: "Implemented and managed Airflow DAGs for automated reporting services and cross-database workflows—moving data between SQL Server and PostgreSQL, and synchronizing SQL Server instances for service charge, forex rules, and operational processes.",
+        stats: [
+          "Streamlined multi-DB reporting pipelines",
+          "Automated daily syncs for critical business rules",
+        ],
+        tags: ["Python", "Airflow", "SQL Server", "PostgreSQL"],
+      },
+    ],
+  },
 ];
 
 const ProjectModal = ({ db, onClose }) => {

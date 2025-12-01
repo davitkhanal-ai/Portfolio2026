@@ -184,9 +184,11 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-blue-500 font-medium tracking-[0.2em] mb-4 uppercase text-sm md:text-base"
+          className=" font-medium tracking-[0.2em] mb-4 uppercase text-sm md:text-base"
         >
-          Developer at Vanilla Trans Technor
+          Software Engineer at{" "}
+          <span style={{ color: "#FF5100" }}>CEDAR GATE </span>
+          <span className="text-white">TECHNOLOGIES</span>
         </motion.h2>
 
         <motion.h1
