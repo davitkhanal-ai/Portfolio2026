@@ -186,9 +186,9 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className=" font-medium tracking-[0.2em] mb-4 uppercase text-sm md:text-base"
         >
-          Software Engineer at{" "}
-          <span style={{ color: "#FF5100" }}>CEDAR GATE </span>
-          <span className="text-white">TECHNOLOGIES</span>
+          Currently exploring differents Game's at{" "}
+          <span style={{ color: "#66C0F4" }}>Steam </span>
+          <span className="text-white">###</span>
         </motion.h2>
 
         <motion.h1

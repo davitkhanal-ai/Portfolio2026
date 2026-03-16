@@ -169,6 +169,17 @@ const Contact = () => {
                   className="text-gray-300 group-hover:text-papaya"
                 />
               </a>
+
+              <a
+                target="_blank"
+                href="https://www.youtube.com"
+                className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:text-papaya transition-all group"
+              >
+                <Code
+                  size={24}
+                  className="text-gray-300 group-hover:text-papaya"
+                />
+              </a>
             </div>
 
             <div className="text-center md:text-left">
