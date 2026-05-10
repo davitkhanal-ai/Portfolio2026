@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion';
 
 const experiences = [
-
   {
-    year: '2024 - 2025',
+    year: '2025 - Present',
     company: 'InfoDeveloper Pvt Ltd.',
     role: '.Net SQL Developer',
     description:
