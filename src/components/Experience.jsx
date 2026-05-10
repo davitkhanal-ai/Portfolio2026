@@ -1,6 +1,19 @@
 import { motion } from 'framer-motion';
 
 const experiences = [
+
+  {
+    year: '2024 - 2025',
+    company: 'InfoDeveloper Pvt Ltd.',
+    role: '.Net SQL Developer',
+    description:
+      'Optimized and maintained SQL Server databases for a high-traffic fintech platform, ensuring seamless performance and reliability.',
+    task: [
+      'Optimized SQL queries and database performance, resulting in a 40% reduction in cloud infrastructure costs.',
+      'Deadicated to ensuring high availability and reliability of database systems, contributing to a seamless user experience for over 700K users and handling 150K+ daily transactions.',
+      'Nepali fintech platform, ensuring seamless performance and reliability.',
+    ],
+  },
   {
     year: '2024 - 2025',
     company: 'Vanilla Trans Technor Pvt Ltd.',
@@ -14,7 +27,7 @@ const experiences = [
     ],
   },
   {
-    year: '2021 - 2023',
+    year: '2021 - 2024',
     company: 'Synergy Tech Software',
     role: 'Support Engineer',
     description: 'Application Support for Class D Banks',
