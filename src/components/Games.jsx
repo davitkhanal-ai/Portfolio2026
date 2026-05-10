@@ -212,8 +212,8 @@ const Games = () => {
             Currently <span className='text-papaya'>Playing</span>
           </h2>
           <p className='text-gray-400 text-lg max-w-2xl text-center mx-auto'>
-            Lock in your favorite titles, unlock match stats, and flex the
-            latest achievements.
+            Choose a game to open the match dashboard and review key performance
+            stats.
           </p>
         </motion.div>
 
