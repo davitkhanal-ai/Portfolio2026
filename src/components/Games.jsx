@@ -2,7 +2,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { GiMonkey } from 'react-icons/gi';
 import { SiCounterstrike, SiSteam } from 'react-icons/si';
 
 const games = [
@@ -63,25 +62,25 @@ const games = [
   //     },
   //   ],
   // },
-  {
-    id: 'wukong',
-    name: 'Black Myth: Wukong',
-    icon: GiMonkey,
-    tagline: 'Action RPG Adventure',
-    color: '#8B4513',
-    projects: [
-      {
-        title: 'Wukong Journey Completion',
-        desc: 'Completed the full story of Black Myth: Wukong, mastering combat mechanics and exploring all hidden areas.',
-        stats: [
-          '0.01% completion achieved',
-          'Just Started the Journey',
-          'Starting to explore the mystical world of Wukong',
-        ],
-        tags: ['RPG', 'Action', 'Exploration'],
-      },
-    ],
-  },
+  // {
+  //   id: 'wukong',
+  //   name: 'Black Myth: Wukong',
+  //   icon: GiMonkey,
+  //   tagline: 'Action RPG Adventure',
+  //   color: '#8B4513',
+  //   projects: [
+  //     {
+  //       title: 'Wukong Journey Completion',
+  //       desc: 'Completed the full story of Black Myth: Wukong, mastering combat mechanics and exploring all hidden areas.',
+  //       stats: [
+  //         '0.01% completion achieved',
+  //         'Just Started the Journey',
+  //         'Starting to explore the mystical world of Wukong',
+  //       ],
+  //       tags: ['RPG', 'Action', 'Exploration'],
+  //     },
+  //   ],
+  // },
 ];
 
 const ProjectModal = ({ game, onClose }) => {
