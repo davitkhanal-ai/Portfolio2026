@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:gh": "vite build --base /Portfolio2026/",
     "lint": "eslint .",
-    "preview": "npm run build && wrangler dev",
+    "preview": "npm run build && vite preview",
     "predeploy": "npm run build",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "wrangler deploy",
+    "deploy:gh": "npm run build:gh && gh-pages -d dist"
   },
   "dependencies": {
     "clsx": "^2.1.1",
