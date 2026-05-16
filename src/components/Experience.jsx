@@ -26,7 +26,7 @@ const experiences = [
     ],
   },
   {
-    year: '2021 - 2024',
+    year: '2022 - 2024',
     company: 'Synergy Tech Software',
     role: 'Support Engineer',
     description: 'Application Support for Class D Banks',
